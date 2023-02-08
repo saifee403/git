@@ -53,7 +53,7 @@
     max-width: 1024px;
 }
 .headerIcon{
-    color: lightcoral;
+    color: rgb(161, 116, 116);
 }
 .headerSearchItem{
     display: flex;
@@ -67,7 +67,7 @@
 .date{
     position: absolute;
     top: 50px;
-    
+    z-index: 2;
 }
 .options{
     position: absolute;
@@ -76,6 +76,7 @@
     color: gray;
     border-radius: 5px;
     box-shadow: 0px 0px 10px -5px rgb(0, 0, 0, 0.4);
+    z-index: 2;
 }
 .optionItem{
     width: 200px;
