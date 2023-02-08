@@ -4,6 +4,7 @@ import Navbar from "../../component/navbar/Navbar"
 import PropertyList from "../../component/propertyList/PropertyList"
 import FeaturedProp from "../../component/featuredProperties/FeaturedProp"
 import "./home.css"
+import MailList from "../../component/mailList/MailList"
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
         <PropertyList/>
         <div className="homeTitle">Home guest love</div>
         <FeaturedProp/>
+        <MailList/>
       </div>
     </div>
   )
