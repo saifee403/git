@@ -15,7 +15,17 @@ function SearchItem() {
             <span className="siCancelOp">Free cancellation</span>
             <span className="siCancelOpSubtitle">You can cancel leter so lock in this great price today</span>
         </div>
-        <div className="siDetails">details</div>
+        <div className="siDetails">
+            <div className="siRating">
+                <span>Excellent</span>
+                <button>4.6</button>
+            </div>
+            <div className="siDetailsTexts">
+                <span className="siPrice">$25</span>
+                <span className="siTaxOp">Includes taxes and fees</span>
+                <button className='siCheckButton'>See Availability</button>
+            </div>
+        </div>
     </div>
   )
 }
