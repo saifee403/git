@@ -2,9 +2,15 @@ import './hotel.css'
 import Navbar from "../../component/navbar/Navbar"
 import Header from "../../component/header/Header"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLocation, faLocationDot } from '@fortawesome/free-solid-svg-icons'
-
+import { faCircleArrowLeft, faCircleArrowRight, faCircleXmark, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import MailList from "../../component/mailList/MailList"
+import Footer from "../../component/footer/Footer"
+import { useState } from 'react'
 function Hotel() {
+
+  const [slideNumber, setSlideNumber] = useState(0);
+  const [open, setOpen] = useState(false);
+
   const photos = [
     {
       src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
@@ -26,12 +32,26 @@ function Hotel() {
     },
 
   ]
+
+  const handleOpen = (i)=>{
+     setSlideNumber(i);
+     setOpen(true);
+  };
   return (
     <div>
       <Navbar />
       <Header type="list" />
       <div className="hotelContainer">
+        {open && <div className="slider">
+          <FontAwesomeIcon icon={faCircleXmark}/>
+          <FontAwesomeIcon icon={faCircleArrowLeft}/>
+          <div className="sliderWrapper">
+            <img src={photos[slideNumber.src]} alt="" className="sliderImg" />
+          </div>
+          <FontAwesomeIcon icon={faCircleArrowRight}/>
+        </div>}
         <div className="hotelWrapper">
+          <button className="bookNow">Reserve Now</button>
           <h1 className="hotelTitle">Days Inn Hotel</h1>
           <div className="hetelAddress">
             <FontAwesomeIcon icon={faLocationDot} />
@@ -44,9 +64,12 @@ function Hotel() {
             Book a stay over $25 at this property and get a free airport taxi
           </span>
           <div className="hotelImages">
-            {photos.map(photo => (
+            {photos.map((photo, i) => (
               <div className="hotelImgWrapper">
-                <img src={photo.src} alt="" className='hotelImg' />
+                <img 
+                onClick={()=>handleOpen(i)} 
+                src={photo.src} alt="" 
+                className='hotelImg' />
               </div>
             ))}
           </div>
@@ -71,6 +94,8 @@ function Hotel() {
             </div>
           </div>
         </div>
+        <MailList />
+        <Footer /> 
       </div>
     </div>
   )
