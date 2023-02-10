@@ -59,7 +59,7 @@ function List() {
                 </div>
                 <div className="lsOptionItem">
                   <span className="lsOptionText">
-                    Children
+                    Children1
                   </span>
                   <input type="number" min={0} className='lsOptionInput' placeholder={options.children} />
                 </div>
