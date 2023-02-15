@@ -43,7 +43,8 @@
 }
 .headerSearch{
     height: 30px;
-    background-color: rgb(165, 206, 206);
+    background-color: rgb(254, 255, 255);
+    color: black;
     border: 3px solid #febb02;
     display: flex;
     align-items: center;
@@ -56,7 +57,7 @@
     max-width: 1024px;
 }
 .headerIcon{
-    color: rgb(161, 116, 116);
+    color: rgb(156, 66, 66);
 }
 .headerSearchItem{
     display: flex;
