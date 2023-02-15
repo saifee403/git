@@ -13,6 +13,7 @@
 }
 .fpImg{
     width: 100%;
+    border-radius: 10px;
 }
 .fpName{
   font-weight: bold;  

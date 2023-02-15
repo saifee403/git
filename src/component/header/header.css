@@ -32,11 +32,14 @@
     margin: 20px 0px;
 }
 .headerBtn{
-    background-color: rgb(13, 218, 30);
-    color: azure;
+    background-color: rgb(196, 221, 198);
+    color: rgb(51, 53, 53);
     border: none;
     padding: 10px;
     cursor: pointer;
+}
+.headerBtn:hover{
+    background-color: chartreuse;
 }
 .headerSearch{
     height: 30px;
