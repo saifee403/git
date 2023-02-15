@@ -23,6 +23,9 @@
     padding: 5px 10px;
     cursor: pointer;
     color: rgb(42, 73, 12);
-    background-color: rgb(114, 155, 114);
-    border-radius: 5px;
+    background-color: rgb(192, 218, 192);
+    border-radius: 2px;
+}
+.navButton:hover{
+    background-color: chartreuse;
 }
